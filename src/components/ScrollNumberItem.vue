@@ -51,11 +51,13 @@ function startScroll() {
 
 defineEmits(['cancelAnimationFrame'])
 
-function cancelAnimationFrame() {
+function cancelAnimationFrame(endValue: number) {
   if (rAF) {
     window.cancelAnimationFrame(rAF)
-    current.value = end.value
     rAF = null
+    current.value = endValue % 10
+    startTime = null
+    isTransitioning = false
   }
 }
 
@@ -72,9 +74,7 @@ function calcCurrrntValue(time: number) {
   }
   const progress = (time - startTime) / props.transformDuration
   if (progress > 1) {
-    current.value = end.value % 10
-    startTime = null
-    isTransitioning = false
+    cancelAnimationFrame(end.value)
     return
   }
   // current.value = (start.value + (end.value - start.value) * progress) % 10
