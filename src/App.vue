@@ -2,10 +2,10 @@
 import { ref } from 'vue'
 const value = ref(123.45)
 const add = () => {
-  value.value += 3
+  value.value += 20
 }
 const sub = () => {
-  value.value -= 3
+  value.value -= 20
 }
 </script>
 

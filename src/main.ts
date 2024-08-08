@@ -5,6 +5,11 @@ import ScrollNumber from './index'
 
 createApp(App)
   .use(ScrollNumber, {
-    transformDuration: 2500
+    transformDuration: 1500,
+    fractionDigits: 3,
+    prefix: 'QQ',
+    infix: '$',
+    suffix: 'num',
+    thousandSeparator: ','
   })
   .mount('#app')

@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
+import { easeInOutCubic } from 'js-easing-functions'
 
 const props = defineProps<{
   value: number
@@ -19,6 +20,7 @@ watch(
     if (isTransitioning) {
       start.value = current.value
       end.value = val
+      startTime = null
     } else {
       start.value = end.value
       end.value = val
@@ -29,9 +31,11 @@ watch(
 
 const start = ref(props.value)
 const end = ref(props.value)
-const current = ref(props.value)
+const current = ref(props.value % 10)
+
 const topValue = computed(() => Math.floor(current.value))
 const bottomValue = computed(() => Math.floor(current.value) + 1)
+
 const styleTop = computed(() => ({
   transform: `translateY(${(current.value - topValue.value) * 100 * -1}%)`,
   opacity: 1 - Math.abs(current.value - topValue.value)
@@ -68,12 +72,19 @@ function calcCurrrntValue(time: number) {
   }
   const progress = (time - startTime) / props.transformDuration
   if (progress > 1) {
-    current.value = end.value
+    current.value = end.value % 10
     startTime = null
     isTransitioning = false
     return
   }
-  current.value = (start.value + (end.value - start.value) * progress) % 10
+  // current.value = (start.value + (end.value - start.value) * progress) % 10
+  current.value =
+    easeInOutCubic(
+      time - startTime,
+      start.value,
+      end.value - start.value,
+      props.transformDuration
+    ) % 10
   rAF = requestAnimationFrame(calcCurrrntValue)
 }
 </script>
@@ -83,7 +94,6 @@ function calcCurrrntValue(time: number) {
   display: inline-block;
   position: relative;
   height: auto;
-  /* overflow: inherit; */
 }
 .scroll-item-wrapper .scroll-numbers {
   display: inline-block;
