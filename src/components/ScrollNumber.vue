@@ -82,6 +82,7 @@ const numbers = computed(() =>
 
 <style scoped>
 .scroll-number-wrapper {
+  display: inline;
   overflow: hidden;
 }
 </style>

@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      js-easing-functions:
-        specifier: ^1.0.3
-        version: 1.0.3
     devDependencies:
       '@rushstack/eslint-patch':
         specifier: ^1.8.0
@@ -39,6 +35,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^9.23.0
         version: 9.27.0(eslint@8.57.0)
+      js-easing-functions:
+        specifier: ^1.0.3
+        version: 1.0.3
       npm-run-all2:
         specifier: ^6.2.0
         version: 6.2.2

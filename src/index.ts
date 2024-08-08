@@ -8,3 +8,4 @@ export default function intsall(app: App, options?: IOptions) {
 }
 
 export { ScrollNumber }
+export type { IOptions }

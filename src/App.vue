@@ -11,7 +11,7 @@ const sub = () => {
 
 <template>
   <div @click="add">AAAA</div>
-  <ScrollNumber :value="value" />
+  <ScrollNumber :value="value" />1111111111111
 
   <div style="margin-top: 50px">
     <button @click="add">add</button>
