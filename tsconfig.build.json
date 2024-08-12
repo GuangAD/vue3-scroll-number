@@ -7,6 +7,14 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "noEmit": false,
     "baseUrl": ".",
+    "target": "ES2015",
+    "module": "ES2015",
+    "outDir": "./dist",
+    // "rootDir": "./src",
+    // "strict": true,
+    // "esModuleInterop": true,
+    // "skipLibCheck": true,
+    // "forceConsistentCasingInFileNames": true,
     "paths": {
       "@/*": ["./src/*"]
     }
