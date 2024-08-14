@@ -1,6 +1,6 @@
 {
   "name": "@ggc12319/vue3-scroll-number",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/vue3-scroll-number.cjs",
   "module": "dist/vue3-scroll-number.js",
@@ -8,8 +8,14 @@
   "exports": {
     "./style.css": "./dist/index.css",
     ".": {
-      "import": "./dist/vue3-scroll-number.js",
-      "require": "./dist/vue3-scroll-number.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue3-scroll-number.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue3-scroll-number.cjs"
+      }
     }
   },
   "files": [
