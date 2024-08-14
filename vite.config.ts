@@ -11,7 +11,7 @@ export default defineConfig({
     vueDevTools(),
     dts({
       tsconfigPath: './tsconfig.build.json',
-      rollupTypes: true
+      rollupTypes: false
     })
   ],
 

@@ -1,19 +1,20 @@
 {
   "name": "@ggc12319/vue3-scroll-number",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/vue3-scroll-number.cjs",
   "module": "dist/vue3-scroll-number.js",
   "license": "MIT",
+  "types": "dist/src/index.d.ts",
   "exports": {
     "./style.css": "./dist/index.css",
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/src/index.d.ts",
         "default": "./dist/vue3-scroll-number.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/src/index.d.ts",
         "default": "./dist/vue3-scroll-number.cjs"
       }
     }
@@ -21,7 +22,6 @@
   "files": [
     "dist/*"
   ],
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GuangAD/vue3-scroll-number.git"
@@ -54,7 +54,7 @@
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
     "vite-dts": "^1.0.4",
-    "vite-plugin-dts": "4.0.0-beta.2",
+    "vite-plugin-dts": "4.0.2",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vue": "^3.4.29",
     "vue-tsc": "^2.0.21"
