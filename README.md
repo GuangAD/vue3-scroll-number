@@ -1,39 +1,81 @@
 # vue3-scroll-number
 
-This template should help get you started developing with Vue 3 in Vite.
+A vue3 digital scroll up and down animation component
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## install
 
 ```sh
-pnpm install
+pnpm add @ggc12319/vue3-scroll-number
 ```
 
-### Compile and Hot-Reload for Development
+### configuration
 
-```sh
-pnpm dev
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import ScrollNumber from '../dist/vue3-scroll-number.js'
+import '../dist/index.css'
+
+createApp(App)
+  .use(ScrollNumber, {
+    transformDuration: 1500,
+    fractionDigits: 3,
+    prefix: '^_^',
+    infix: '$',
+    suffix: '@_@',
+    thousandSeparator: ','
+  })
+  .mount('#app')
 ```
 
-### Type-Check, Compile and Minify for Production
+### Used in components
 
-```sh
-pnpm build
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+const value = ref(-123.45)
+const add = () => {
+  value.value += 20
+}
+const sub = () => {
+  value.value -= 20
+}
+
+const percentage = ref(24.8)
+const addPercentage = () => {
+  percentage.value += 2.4
+}
+const subPercentage = () => {
+  percentage.value -= 2.4
+}
+</script>
+
+<template>
+  <div>
+    <ScrollNumber :value="value" />
+    <span style="margin-left: 50px">
+      <button @click="add">add</button>
+      <button @click="sub">sub</button>
+    </span>
+  </div>
+  <div>
+    <ScrollNumber :value="percentage" :fractionDigits="1" prefix="" infix="" suffix="%" />
+    <span style="margin-left: 50px">
+      <button @click="addPercentage">add</button>
+      <button @click="subPercentage">sub</button>
+    </span>
+  </div>
+</template>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## props
 
-```sh
-pnpm lint
-```
+| Attribute         | Description                        | Type   | Default |
+| ----------------- | ---------------------------------- | ------ | ------- |
+| value             | figure                             | number | -       |
+| transformDuration | transform duration                 | number | 1500    |
+| fractionDigits    | fraction digits                    | number | 0       |
+| prefix            | prefix                             | string | ''      |
+| infix             | prefix but after the negative sign | string | ''      |
+| suffix            | suffix                             | string | ''      |
+| thousandSeparator | the thousand separator             | string | ,       |

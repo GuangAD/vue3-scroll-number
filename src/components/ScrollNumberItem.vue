@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
-import { easeInOutCubic } from 'js-easing-functions'
+import { easeInOutCubic } from '../utils'
 
 const props = defineProps<{
   value: number

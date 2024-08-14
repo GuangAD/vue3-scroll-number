@@ -1,15 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import ScrollNumber from './index'
-// import '../dist/style.css'
+import ScrollNumber from '../dist/vue3-scroll-number.js'
+import '../dist/index.css'
 
 createApp(App)
   .use(ScrollNumber, {
     transformDuration: 1500,
     fractionDigits: 3,
-    prefix: 'QQ',
+    prefix: '^_^',
     infix: '$',
-    suffix: 'num',
+    suffix: '@_@',
     thousandSeparator: ','
   })
   .mount('#app')

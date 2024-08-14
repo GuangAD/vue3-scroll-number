@@ -1,15 +1,24 @@
 {
-  "name": "vue3-scroll-number",
-  "version": "0.0.1",
+  "name": "@ggc12319/vue3-scroll-number",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/vue3-scroll-number.cjs",
   "module": "dist/vue3-scroll-number.js",
+  "license": "MIT",
+  "exports": {
+    "./style.css": "./dist/index.css",
+    ".": {
+      "import": "./dist/vue3-scroll-number.js",
+      "require": "./dist/vue3-scroll-number.cjs"
+    }
+  },
   "files": [
     "dist/*"
   ],
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GuangAD/vue3-scroll-number"
+    "url": "git+https://github.com/GuangAD/vue3-scroll-number.git"
   },
   "scripts": {
     "dev": "vite",
@@ -22,7 +31,6 @@
     "format": "prettier --write src/"
   },
   "peerDependencies": {
-    "js-easing-functions": "^1.0.3",
     "vue": "^3.4.0"
   },
   "devDependencies": {
@@ -35,13 +43,12 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
-    "js-easing-functions": "^1.0.3",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
     "vite-dts": "^1.0.4",
-    "vite-plugin-dts": "^4.0.1",
+    "vite-plugin-dts": "4.0.0-beta.2",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vue": "^3.4.29",
     "vue-tsc": "^2.0.21"

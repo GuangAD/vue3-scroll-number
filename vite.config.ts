@@ -6,7 +6,15 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import dts from 'vite-plugin-dts'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueDevTools(), dts({ tsconfigPath: './tsconfig.build.json' })],
+  plugins: [
+    vue(),
+    vueDevTools(),
+    dts({
+      tsconfigPath: './tsconfig.build.json',
+      rollupTypes: true
+    })
+  ],
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -16,13 +24,16 @@ export default defineConfig({
     target: 'esnext',
     copyPublicDir: false,
     sourcemap: true,
+    minify: true,
+    cssCodeSplit: true,
     lib: {
       entry: './src/index.ts',
       name: 'ScrollNumber',
-      formats: ['es', 'cjs', 'umd', 'iife']
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
       external: ['vue']
-    }
+    },
+    emptyOutDir: true
   }
 })
