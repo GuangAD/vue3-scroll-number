@@ -18,19 +18,19 @@ watch(
   () => props.value,
   (val) => {
     if (isTransitioning) {
-      start.value = current.value
-      end.value = val
+      start = current.value
+      end = val
       startTime = null
     } else {
-      start.value = end.value
-      end.value = val
+      start = end
+      end = val
       startScroll()
     }
   }
 )
 
-const start = ref(props.value)
-const end = ref(props.value)
+let start = props.value
+let end = props.value
 const current = ref(props.value % 10)
 
 const topValue = computed(() => Math.floor(current.value))
@@ -74,17 +74,11 @@ function calcCurrrntValue(time: number) {
   }
   const progress = (time - startTime) / props.transformDuration
   if (progress > 1) {
-    cancelAnimationFrame(end.value)
+    cancelAnimationFrame(end)
     return
   }
   // current.value = (start.value + (end.value - start.value) * progress) % 10
-  current.value =
-    easeInOutCubic(
-      time - startTime,
-      start.value,
-      end.value - start.value,
-      props.transformDuration
-    ) % 10
+  current.value = easeInOutCubic(time - startTime, start, end - start, props.transformDuration) % 10
   rAF = requestAnimationFrame(calcCurrrntValue)
 }
 </script>
