@@ -1,9 +1,9 @@
 <template>
   <div class="scroll-number-wrapper">
-    <template v-for="(item, index) in numbers" :key="index">
+    <template v-for="(item, index) in numbers" :key="numberLength - index">
       <ScrollNumberItem
         v-if="isNumber(item)"
-        :value="item"
+        :value="Number(item)"
         :transform-duration="transformDuration"
       />
       <span v-else>{{ item }}</span>
@@ -37,6 +37,7 @@ function isNumber(x: any): x is number {
   return !Number.isNaN(+x)
 }
 /** */
+let numberLength: number = 0
 function formatNumbers(
   value: number,
   fractionDigits: number,
@@ -47,7 +48,8 @@ function formatNumbers(
 ) {
   // 分隔
   const isNegative = value < 0
-  const digits: Array<number | string> = value.toFixed(fractionDigits).split('')
+  const digits: Array<string> = value.toFixed(fractionDigits).split('')
+  numberLength = fractionDigits <= 0 ? digits.length : digits.length - 1
   // 千分位符
   if (thousandSeparator) {
     let counter = 0
@@ -65,7 +67,7 @@ function formatNumbers(
   infix && (value < 0 ? digits.splice(1, 0, infix) : digits.unshift(infix))
   // 前缀1
   prefix && digits.unshift(prefix)
-  return digits.map((it) => (isNumber(it) ? Number(it) : it))
+  return digits
 }
 
 const numbers = computed(() =>

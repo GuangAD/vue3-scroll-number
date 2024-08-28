@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import ScrollNumber from '../dist/vue3-scroll-number.js'
-import '../dist/index.css'
+import ScrollNumber from '../src/index'
 
 createApp(App)
   .use(ScrollNumber, {

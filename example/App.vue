@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const value = ref(-224.67)
+const value = ref(7)
 const add = () => {
-  value.value += 17
+  value.value += 1
 }
 const sub = () => {
-  value.value -= 15
+  value.value -= 1
 }
 
 const percentage = ref(24.8)
@@ -25,11 +25,11 @@ const subPercentage = () => {
       <button @click="sub">sub count is {{ value }}</button>
     </span>
   </div>
-  <!-- <div>
+  <div>
     <ScrollNumber :value="percentage" :fractionDigits="1" prefix="" infix="" suffix="%" />
     <span style="margin-left: 50px">
       <button @click="addPercentage">add</button>
       <button @click="subPercentage">sub</button>
     </span>
-  </div> -->
+  </div>
 </template>
