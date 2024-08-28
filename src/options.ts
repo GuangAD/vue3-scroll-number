@@ -1,5 +1,4 @@
 export interface IOptions {
-  curve?: 'linear' | 'ease' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'cubic-bezier'
   transformDuration?: number
   fractionDigits?: number
   prefix?: string
