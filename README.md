@@ -13,8 +13,8 @@ pnpm add @ggc12319/vue3-scroll-number
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import ScrollNumber from '../dist/vue3-scroll-number.js'
-import '../dist/index.css'
+import ScrollNumber from '@ggc12319/vue3-scroll-number'
+import '@ggc12319/vue3-scroll-number/style.css'
 
 createApp(App)
   .use(ScrollNumber, {

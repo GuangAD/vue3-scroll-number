@@ -12,12 +12,12 @@ export default {
   name: 'ScrollNumber',
   props: {
     value: { type: Number, required: true },
-    transformDuration: { type: Number, default: getOption('transformDuration') as number },
-    fractionDigits: { type: Number, default: getOption('fractionDigits') as number },
-    prefix: { type: String, default: getOption('prefix') as string },
-    infix: { type: String, default: getOption('infix') as string },
-    suffix: { type: String, default: getOption('suffix') as string },
-    thousandSeparator: { type: String, default: getOption('thousandSeparator') as string }
+    transformDuration: { type: Number, default: () => getOption('transformDuration') as number },
+    fractionDigits: { type: Number, default: () => getOption('fractionDigits') as number },
+    prefix: { type: String, default: () => getOption('prefix') as string },
+    infix: { type: String, default: () => getOption('infix') as string },
+    suffix: { type: String, default: () => getOption('suffix') as string },
+    thousandSeparator: { type: String, default: () => getOption('thousandSeparator') as string }
   },
   components: { ScrollNumberItem },
   setup(props: IProps) {
