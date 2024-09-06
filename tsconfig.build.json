@@ -10,6 +10,8 @@
     "target": "ES2015",
     "module": "ES2015",
     "outDir": "./dist",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
     // "rootDir": "./src",
     // "strict": true,
     // "esModuleInterop": true,

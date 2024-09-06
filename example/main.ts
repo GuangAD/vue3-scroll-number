@@ -4,11 +4,11 @@ import ScrollNumber from '../src/index'
 
 createApp(App)
   .use(ScrollNumber, {
-    transformDuration: 1500,
-    fractionDigits: 3,
-    prefix: '^_^',
-    infix: '$',
-    suffix: '@_@',
-    thousandSeparator: ','
+    // transformDuration: 1500,
+    // fractionDigits: 3,
+    // prefix: '^_^',
+    // infix: '$',
+    // suffix: '@_@',
+    // thousandSeparator: ','
   })
   .mount('#app')

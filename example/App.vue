@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const value = ref(7)
+const value = ref(4.4)
 const add = () => {
-  value.value += 1
+  value.value += 1.7
 }
 const sub = () => {
-  value.value -= 1
+  value.value -= 1.7
 }
 
 const percentage = ref(24.8)
