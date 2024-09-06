@@ -1,6 +1,6 @@
 {
   "name": "@ggc12319/vue3-scroll-number",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/vue3-scroll-number.cjs",
   "module": "dist/vue3-scroll-number.js",
