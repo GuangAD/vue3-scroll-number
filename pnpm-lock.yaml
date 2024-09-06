@@ -47,12 +47,9 @@ importers:
       vite:
         specifier: ^5.3.1
         version: 5.3.5(@types/node@20.14.14)
-      vite-dts:
-        specifier: ^1.0.4
-        version: 1.0.4(vite@5.3.5(@types/node@20.14.14))
       vite-plugin-dts:
-        specifier: 4.0.3
-        version: 4.0.3(@types/node@20.14.14)(rollup@4.20.0)(typescript@5.4.5)(vite@5.3.5(@types/node@20.14.14))
+        specifier: ^4.1.0
+        version: 4.1.0(@types/node@20.14.14)(rollup@4.20.0)(typescript@5.4.5)(vite@5.3.5(@types/node@20.14.14))
       vite-plugin-vue-devtools:
         specifier: ^7.3.1
         version: 7.3.7(rollup@4.20.0)(vite@5.3.5(@types/node@20.14.14))(vue@3.4.35(typescript@5.4.5))
@@ -941,9 +938,6 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  error-ex@1.3.2:
-    resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
-
   error-stack-parser-es@0.1.5:
     resolution: {integrity: sha512-xHku1X40RO+fO8yJ8Wh2f2rZWVjqyhb1zgq1yZ8aZRQkv6OOKhKWRUaht3eSCUbAOBaKIgM+ykwFLE+QUxgGeg==}
 
@@ -1175,9 +1169,6 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  is-arrayish@0.2.1:
-    resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
-
   is-core-module@2.15.0:
     resolution: {integrity: sha512-Dd+Lb2/zvk9SKy1TGCt1wFJFo/MWBPMX5x7KcvLajWTGuomczdQX61PvY5yK6SVACwpoexWo81IfFyoKY2QnTA==}
     engines: {node: '>= 0.4'}
@@ -1241,9 +1232,6 @@ packages:
   json-buffer@3.0.1:
     resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
 
-  json-parse-even-better-errors@2.3.1:
-    resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
-
   json-parse-even-better-errors@3.0.2:
     resolution: {integrity: sha512-fi0NG4bPjCHunUJffmLd0gxssIgkNmArMvis4iNah6Owg1MCJjWhEcDLmsK6iGkJq3tHwbDkTlce70/tmXN4cQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -1277,13 +1265,6 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
-
-  lines-and-columns@1.2.4:
-    resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
-
-  load-json-file@6.2.0:
-    resolution: {integrity: sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==}
-    engines: {node: '>=8'}
 
   local-pkg@0.5.0:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
@@ -1407,10 +1388,6 @@ packages:
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
-
-  parse-json@5.2.0:
-    resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
-    engines: {node: '>=8'}
 
   path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
@@ -1587,10 +1564,6 @@ packages:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
 
-  strip-bom@4.0.0:
-    resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
-    engines: {node: '>=8'}
-
   strip-final-newline@3.0.0:
     resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
     engines: {node: '>=12'}
@@ -1658,10 +1631,6 @@ packages:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
 
-  type-fest@0.6.0:
-    resolution: {integrity: sha512-q+MB8nYR1KDLrgr4G5yemftpMC7/QLqVndBmEEdqzmNj5dcFOO4Oo8qlwZE3ULT3+Zim1F8Kq4cBnikNhlCMlg==}
-    engines: {node: '>=8'}
-
   typescript@5.4.2:
     resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
     engines: {node: '>=14.17'}
@@ -1698,18 +1667,13 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vite-dts@1.0.4:
-    resolution: {integrity: sha512-jfRsrBU8vibUS4a/AboDzHdph2/9/dpoMdYgkiD5tb4OXL75wnlzeEZ6D2XoEZNExwnkXqARKAvz7pv5VtUm5g==}
-    peerDependencies:
-      vite: '>2.0.0-0'
-
   vite-hot-client@0.2.3:
     resolution: {integrity: sha512-rOGAV7rUlUHX89fP2p2v0A2WWvV3QMX2UYq0fRqsWSvFvev4atHWqjwGoKaZT1VTKyLGk533ecu3eyd0o59CAg==}
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0
 
-  vite-plugin-dts@4.0.3:
-    resolution: {integrity: sha512-+xnTsaONwU2kV6zhRjtbRJSGN41uFR/whqmcb4k4fftLFDJElxthp0PP5Fq8gMeM9ytWMt1yk5gGgekLREWYQQ==}
+  vite-plugin-dts@4.1.0:
+    resolution: {integrity: sha512-sRlmt9k2q8MrX4F2058N3KmB6WyJ3Ao6QaExOv1X99F3j0GhPziEz1zscWQ1q2r1PeFc96L7GIUu8Pl2DPr2Hg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -2735,10 +2699,6 @@ snapshots:
 
   entities@4.5.0: {}
 
-  error-ex@1.3.2:
-    dependencies:
-      is-arrayish: 0.2.1
-
   error-stack-parser-es@0.1.5: {}
 
   esbuild@0.21.5:
@@ -3016,8 +2976,6 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  is-arrayish@0.2.1: {}
-
   is-core-module@2.15.0:
     dependencies:
       hasown: 2.0.2
@@ -3060,8 +3018,6 @@ snapshots:
 
   json-buffer@3.0.1: {}
 
-  json-parse-even-better-errors@2.3.1: {}
-
   json-parse-even-better-errors@3.0.2: {}
 
   json-schema-traverse@0.4.1: {}
@@ -3092,15 +3048,6 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
-
-  lines-and-columns@1.2.4: {}
-
-  load-json-file@6.2.0:
-    dependencies:
-      graceful-fs: 4.2.11
-      parse-json: 5.2.0
-      strip-bom: 4.0.0
-      type-fest: 0.6.0
 
   local-pkg@0.5.0:
     dependencies:
@@ -3228,13 +3175,6 @@ snapshots:
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
-
-  parse-json@5.2.0:
-    dependencies:
-      '@babel/code-frame': 7.24.7
-      error-ex: 1.3.2
-      json-parse-even-better-errors: 2.3.1
-      lines-and-columns: 1.2.4
 
   path-browserify@1.0.1: {}
 
@@ -3380,8 +3320,6 @@ snapshots:
     dependencies:
       ansi-regex: 5.0.1
 
-  strip-bom@4.0.0: {}
-
   strip-final-newline@3.0.0: {}
 
   strip-json-comments@3.1.1: {}
@@ -3433,8 +3371,6 @@ snapshots:
 
   type-fest@0.20.2: {}
 
-  type-fest@0.6.0: {}
-
   typescript@5.4.2: {}
 
   typescript@5.4.5: {}
@@ -3459,16 +3395,11 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-dts@1.0.4(vite@5.3.5(@types/node@20.14.14)):
-    dependencies:
-      load-json-file: 6.2.0
-      vite: 5.3.5(@types/node@20.14.14)
-
   vite-hot-client@0.2.3(vite@5.3.5(@types/node@20.14.14)):
     dependencies:
       vite: 5.3.5(@types/node@20.14.14)
 
-  vite-plugin-dts@4.0.3(@types/node@20.14.14)(rollup@4.20.0)(typescript@5.4.5)(vite@5.3.5(@types/node@20.14.14)):
+  vite-plugin-dts@4.1.0(@types/node@20.14.14)(rollup@4.20.0)(typescript@5.4.5)(vite@5.3.5(@types/node@20.14.14)):
     dependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@20.14.14)
       '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
